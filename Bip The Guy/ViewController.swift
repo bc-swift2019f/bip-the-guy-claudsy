@@ -10,46 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageToPunch: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-    @IBAction func upBy200Pressed(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.5, animations:
-            { self.imageView.frame.origin.y -= 200})
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     
-    
-    @IBAction func expandBy60Pressed(_ sender: Any) {
-        let largerRec = CGRect(x: imageView.bounds.origin.x - 60, y: imageView.bounds.origin.y - 60, width: imageView.bounds.width + 60, height: imageView.bounds.height + 60)
+    //MARK: functions
+    func animateImage() {
+        let bounds = self.imageToPunch.bounds
+        let shrinkValue: CGFloat = 60
         
-        UIView.animate(withDuration: 0.2, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, animations:
-            { self.imageView.bounds = largerRec})
+        //shrink image by 60p
+        self.imageToPunch.bounds = CGRect(x: self.imageToPunch.bounds.origin.x + shrinkValue, y: self.imageToPunch.bounds.origin.y + shrinkValue, width: self.imageToPunch.bounds.size.width - shrinkValue, height: self.imageToPunch.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.imageToPunch.bounds = bounds}, completion: nil)
+        
     }
     
-    @IBAction func fadeOutPressed(_ sender: UIButton) {
+    //MARK: actions
+    @IBAction func libraryPressed(_ sender: UIButton) {
     }
     
-    @IBAction func pushRightPressed(_ sender: UIButton) {
+    @IBAction func cameraPressed(_ sender: UIButton) {
     }
     
-    @IBAction func rotate180Pressed(_ sender: UIButton) {
+    @IBAction func imageTapped(_ sender:
+        UITapGestureRecognizer) {
+        animateImage()
     }
-    
-    
-    @IBAction func slideRight100Pressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func changeBackgroundPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func resetPressed(_ sender: UIButton) {
-    }
-    
     
 }
 

@@ -25,69 +25,30 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itv-Qw-FfQ">
-                                <rect key="frame" x="24" y="353" width="77" height="30"/>
+                                <rect key="frame" x="40" y="355" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="↑ by 200"/>
+                                <state key="normal" title="Photo Library"/>
                                 <connections>
+                                    <action selector="libraryPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ti4-w1-3pe"/>
                                     <action selector="upBy200Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imM-b8-FeQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXh-UT-RKT">
-                                <rect key="frame" x="117" y="353" width="87" height="30"/>
+                                <rect key="frame" x="169" y="355" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="⤧ by 60"/>
+                                <state key="normal" title="Take a Photo"/>
                                 <connections>
+                                    <action selector="cameraPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6B-uy-Rr0"/>
                                     <action selector="expandBy60Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Czf-lP-sz6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fS-mm-PSt">
-                                <rect key="frame" x="226" y="353" width="63" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Image to Punch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLl-uq-RYn">
+                                <rect key="frame" x="34" y="326" width="252" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fade"/>
-                                <connections>
-                                    <action selector="fadeOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Jk-Ig-Qb4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPc-AF-JWL">
-                                <rect key="frame" x="223" y="402" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="↻ 180"/>
-                                <connections>
-                                    <action selector="rotate180Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CdR-2X-0RY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42K-g8-nRk">
-                                <rect key="frame" x="23" y="402" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Push ➜ "/>
-                                <connections>
-                                    <action selector="pushRightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eeR-24-feK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzp-sI-kCi">
-                                <rect key="frame" x="9" y="451" width="106" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Slide ➜ 100"/>
-                                <connections>
-                                    <action selector="slideRight100Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3DI-s6-Wbw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bra-7i-udP">
-                                <rect key="frame" x="197" y="451" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change Bkgd"/>
-                                <connections>
-                                    <action selector="changeBackgroundPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xlZ-Xl-b2S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwO-Kc-tSd">
-                                <rect key="frame" x="128" y="518" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qYP-gm-V39"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
